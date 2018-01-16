@@ -29,8 +29,12 @@ list_train = [filepath for filepath in list_paths if "train/" in filepath]
 shuffle(list_train)
 list_test = [filepath for filepath in list_paths if "test/" in filepath]
 
-list_train = list_train
-list_test = list_test
+# Use a simplified version for the purpose of testing
+list_train = list_train[0:100]
+list_test = list_test[0:20]
+
+# list_train = list_train
+# list_test = list_test
 index = [os.path.basename(filepath) for filepath in list_test]
 
 # 4
